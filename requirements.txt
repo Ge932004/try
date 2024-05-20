@@ -273,10 +273,10 @@ Send2Trash==1.8.0
 service-identity==18.1.0
 setuptools==63.4.1
 shao==1.0.0
-shap==0.42.1
+shap==0.45.1
 sip==4.19.13
 six==1.16.0
-slicer==0.0.7
+slicer==0.0.8
 smart-open==5.2.1
 smmap==5.0.1
 sniffio==1.2.0
