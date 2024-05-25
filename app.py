@@ -4,6 +4,7 @@ import numpy as np
 import shap
 import matplotlib.pyplot as plt
 import joblib
+import math
 
 class StackingClassifierWrapper:
     def __init__(self, model):
@@ -48,7 +49,7 @@ Gender =st.number_input("Gender")
 if st.button("Submit"):
     SE_right_std = (SE_right - Min_values["SE_right"]) / (Max_values["SE_right"] - Min_values["SE_right"])
     Age_std = (Age - Min_values["Age"]) / (Max_values["Age"]-Min_values["Age"])
-    UDVA_std = (Logitech(1/UDVA) - Min_values["UDVA"]) / (Max_values["UDVA"]-Min_values["UDVA"])
+    UDVA_std = (math.log(1 / UDVA) - Min_values["UDVA"]) / (Max_values["UDVA"]-Min_values["UDVA"])
 
     X = pd.DataFrame([[SE_right_std, Age_std, UDVA_std, School, Vision_correction,   Gender]], 
                      columns=["SE_right", "Age", "UDVA","School", "Vision_correction", "Gender"])
