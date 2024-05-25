@@ -71,6 +71,6 @@ if st.button("Submit"):
     st.image('shap_plot.png')
     
     pred = wrapped_model.predict_proba(X)
-    st.markdown("#### _Based on feature values, predicted possibility of continous myopia progression is {:.2%}_".format(pred[0][1]))
+    st.markdown("#### _Predicted possibility of continous myopia progression is {:.2%}_".format(pred[0][1]))
     prediction = wrapped_model.predict(X)[0]
     st.text(f"This instance is a {prediction}")
