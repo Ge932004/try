@@ -40,12 +40,13 @@ Max_values = {
 }
 
 st.header("Continous Myopia Progression Predition App")
-SE_right = st.number_input("SE_right (Diopter)")
 Age = st.number_input("Age (Years)")
-UDVA = st.number_input("UDVA (Decimal Vision)")
-School = st.number_input("School (1=Primary School, 2=Junior High School, 3=Senior High School)")
-Vision_correction = st.number_input("Vision_correction (0=Without, 1=With)")
 Gender =st.number_input("Gender (1=Female, 2=Male)")
+School = st.number_input("School (1=Primary School, 2=Junior High School, 3=Senior High School)")
+SE_right = st.number_input("SE_right (Diopter)")
+UDVA = st.number_input("UDVA (Decimal Vision)")
+Vision_correction = st.number_input("Vision_correction (0=Without, 1=With)")
+
 
 if st.button("Submit"):
     SE_right_std = (SE_right - Min_values["SE_right"]) / (Max_values["SE_right"] - Min_values["SE_right"])
